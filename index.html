@@ -1,154 +1,114 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
 
 <head>
-    <meta charset='utf-8'>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <title>TKENYA</title>
-    <link href='https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha1/dist/css/bootstrap.min.css' rel='stylesheet'>
-    <link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css' rel='stylesheet'>
-    <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
-    <style>
-        body {
-            background-color: #FFEBEE
-        }
+   <meta name="viewport" content="width=device-width, initial-scale=1" />
+   <style>
+   body {
+      font-family: "Lato", sans-serif;
+   }
 
-        .card {
-            width: 350px;
-            background: #4badf7;
-            border-radius: 20px;
-            border: none
-        }
-.block {
-  display: block;
-  width: 100%;
-  border: none;
-  background-color: #04AA6D;
-  padding: 14px 28px;
-  font-size: 16px;
-  cursor: pointer;
-  text-align: center;
-}
-        .circle {
-            height: 56px;
-            width: 56px;
-            line-height: 60px;
-            border-radius: 50%;
-            background-color: #fff;
-            position: relative;
-            left: 28px;
-            top: 66px;
-            -webkit-transition: height .25s ease, width .25s ease;
-            transition: height .25s ease, width .25s ease;
-            -webkit-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%)
-        }
+   .tablink {
+      background-color: rgba(0, 0, 0, 0.5);
+      color: white;
+      float: left;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      padding: 14px 16px;
+      font-size: 17px;
+      width: 25%;
+   }
 
-        .circle i {
-            margin-left: 17px;
-            color: #4badf7;
-            font-size: 20px
-        }
+   .tablink:hover {
+      background-color: #777;
+   }
 
-        .circle:before,
-        .circle:after {
-            content: '';
-            display: block;
-            position: absolute;
-            top: 0;
-            right: 0;
-            bottom: 0;
-            left: 0;
-            border-radius: 50%;
-            border: 1px solid #fff
-        }
+   /* Style the tab content */
 
-        .circle:before {
-            -webkit-animation: ripple 2s linear infinite;
-            animation: ripple 2s linear infinite
-        }
+   .tabcontent {
+      color: white;
+      display: none;
+      padding: 50px;
+      text-align: center;
+      height: 100vh;
+   }
 
-        .circle:after {
-            -webkit-animation: ripple 2s linear 1s infinite;
-            animation: ripple 2s linear 1s infinite
-        }
+   p {
+      display: flex;
+      position: absolute;
+      text-align: center;
+      align-items: center;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-weight: bold;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      color: black;
+      background: white;
+      padding: 15px;
+      border-radius: 2px;
+   }
 
-        @-webkit-keyframes ripple {
-            0% {
-                -webkit-transform: scale(1)
-            }
+   span {
+      color: red;
+      padding: 5px;
+   }
 
-            75% {
-                -webkit-transform: scale(1.75);
-                opacity: 1
-            }
+   #HTML {
+      background-color: rgb(243, 122, 122);
+   }
 
-            100% {
-                -webkit-transform: scale(2);
-                opacity: 0
-            }
-        }
+   #CSS {
+      background-color: rgb(198, 237, 107);
+   }
 
-        @keyframes ripple {
-            0% {
-                transform: scale(1)
-            }
+   #JAVASCRIPT {
+      background-color: rgb(51, 124, 249);
+   }
 
-            75% {
-                transform: scale(1.75);
-                opacity: 1
-            }
-
-            100% {
-                transform: scale(2);
-                opacity: 0
-            }
-        }
-        .custom{
-            border-radius: 40px;
-            box-shadow: 1px 1px 1px  black;
-            outline: none;
-        }
-
-        .button {
-            border-radius: 40px;
-            cursor: pointer;
-            font-size: 30px;
-            text-align: center;
-            color: #4badf7;
-        }
-        .custom2{
-            border:none;
-            width: 220px;
-            outline: none;
-        }
-    </style>
+   #react {
+      background-color: rgb(234, 215, 93);
+   }
+   </style>
 </head>
- 
-<body oncontextmenu='return false' class='snippet-body'>
-    <div class="container mt-5 d-flex justify-content-center">
-       
-        <div class="card p-3">
-            <div class="d-flex flex-row align-items-center justify-content-between text-white">
-                <div class="d-flex flex-row align-items-center"> <i class="fa fa-user"></i> <span class="ml-2">TKENYA</span> </div> 
-                </div>
-            </div>
-            <div class="mt-5 mb-5 d-flex align-items-center justify-content-center">
-                <div class="circle"><i class="fa fa-wifi"></i></div>
-            </div>
-            <div class="mt-5 align-items-center d-flex justify-content-center"> <small class="text-white">TEACHERS PARENTS STUDENTS</small> </div>
-             
-                        <a height="64px"  href="http://tkenya.mywebcommunity.org/" class="btn btn-success  custom bg-lg"  >Proceed</a> 
-          
-
-
-
-        
-
-    </div>
-    <script type='text/javascript' src='https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha1/dist/js/bootstrap.bundle.min.js'></script>
-    <script type='text/javascript' src=''></script>
-    <script type='text/javascript'></script>
+<body>
+   <button class="tablink" onclick="langName('HTML', this, 'rgb(243, 122, 122)')" id="defaultOpen"> HTML </button>
+   <button class="tablink" onclick="langName('CSS', this, 'rgb(198, 237, 107)')"> CSS </button>
+   <button class="tablink" onclick="langName('JAVASCRIPT', this, 'rgb(51, 124, 249)')"> JS </button>
+   <button class="tablink" onclick="langName('react', this, 'rgb(234, 215, 93)')">React</button>
+   <div id="HTML" class="tabcontent">
+      <h1>HTML</h1>
+      <p>This is <span> HTML</span></p>
+   </div>
+   <div id="CSS" class="tabcontent">
+      <h1>CSS</h1>
+      <p>This is <span> CSS</span></p>
+   </div>
+   <div id="JAVASCRIPT" class="tabcontent">
+      <h1>JAVASCRIPT</h1>
+      <p>This is <span> javascript </span></p>
+   </div>
+   <div id="react" class="tabcontent">
+      <h1>React</h1>
+      <p>This is <span> Reactjs</span></p>
+   </div>
+   <script>
+   function langName(name, elmnt, color) {
+      var i, tabcontent, tablinks;
+      tabcontent = document.getElementsByClassName("tabcontent");
+      for (i = 0; i < tabcontent.length; i++) {
+         tabcontent[i].style.display = "none";
+      }
+      tablinks = document.getElementsByClassName("tablink");
+      for (i = 0; i < tablinks.length; i++) {
+         tablinks[i].style.backgroundColor = "";
+      }
+      document.getElementById(name).style.display = "block";
+      elmnt.style.backgroundColor = color;
+   }
+   // Get the element with id="defaultOpen" and click on it
+   document.getElementById("defaultOpen").click();
+   </script>
 </body>
-
 </html>
